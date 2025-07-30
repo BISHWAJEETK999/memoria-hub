@@ -69,10 +69,10 @@ export default function Index() {
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="animate-slide-up">
-            <h1 className="text-6xl md:text-8xl font-playfair font-bold mb-6 bg-gradient-to-r from-accent via-primary to-primary-glow bg-clip-text text-transparent drop-shadow-2xl animate-glow">
+            <h1 className="text-6xl md:text-8xl font-playfair font-bold mb-6 bg-gradient-to-r from-emerald-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-2xl animate-glow">
               <span className="inline-block hover:scale-105 transition-transform duration-300">Memoria</span>
               {" "}
-              <span className="inline-block hover:scale-105 transition-transform duration-300 delay-100">Hub</span>
+              <span className="inline-block hover:scale-105 transition-transform duration-300 delay-100 bg-gradient-to-r from-purple-500 via-pink-400 to-rose-400 bg-clip-text text-transparent">Hub</span>
             </h1>
             <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-delay">
               <Sparkles className="h-7 w-7 text-accent animate-pulse" />
@@ -102,8 +102,9 @@ export default function Index() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="text-lg px-8 py-6 border-accent/30 text-accent hover:bg-accent/10 hover:border-accent/50 font-medium transition-all duration-300"
+                className="text-lg px-8 py-6 border-accent/30 text-accent hover:bg-accent/10 hover:border-accent/50 font-medium transition-all duration-300 cursor-pointer"
                 onClick={scrollToFeatures}
+                type="button"
               >
                 <FileText className="mr-2 h-5 w-5" />
                 Explore Features
