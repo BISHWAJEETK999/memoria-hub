@@ -77,7 +77,7 @@ export default function Index() {
             <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-delay">
               <Sparkles className="h-7 w-7 text-accent animate-pulse" />
               <p className="text-xl md:text-3xl bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent font-playfair italic font-bold animate-glow">
-                Your Digital Memory Palace
+                Smart Note-Taking Made Simple
               </p>
               <Sparkles className="h-7 w-7 text-primary animate-pulse" style={{ animationDelay: '0.5s' }} />
             </div>
@@ -86,8 +86,8 @@ export default function Index() {
           <div className="animate-fade-in-delay relative">
             <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-primary/20 blur-xl"></div>
             <p className="relative text-lg md:text-xl bg-gradient-to-r from-foreground via-accent/80 to-foreground bg-clip-text text-transparent font-semibold mb-8 max-w-3xl mx-auto leading-relaxed tracking-wide">
-              Transform your thoughts into lasting memories. Create, organize, and cherish your digital notes 
-              in a sanctuary designed for your mind's most precious moments.
+              Capture ideas quickly, organize notes effortlessly, and find everything instantly. 
+              The modern note-taking app that keeps up with your thoughts and helps you stay productive.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
