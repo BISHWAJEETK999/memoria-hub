@@ -69,23 +69,23 @@ export default function Index() {
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="animate-slide-up">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-slate-800 via-blue-600 to-indigo-700 bg-clip-text text-transparent drop-shadow-lg font-sans tracking-tight">
-              <span className="inline-block hover:scale-105 transition-transform duration-300">Memoria</span>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-700 via-purple-600 to-indigo-800 bg-clip-text text-transparent drop-shadow-2xl font-sans tracking-tight animate-pulse">
+              <span className="inline-block hover:scale-110 transition-transform duration-500 shadow-2xl">Memoria</span>
               {" "}
-              <span className="inline-block hover:scale-105 transition-transform duration-300 delay-100 bg-gradient-to-r from-purple-600 via-violet-500 to-blue-500 bg-clip-text text-transparent">Hub</span>
+              <span className="inline-block hover:scale-110 transition-transform duration-500 delay-100 bg-gradient-to-r from-orange-500 via-red-500 to-pink-600 bg-clip-text text-transparent shadow-2xl">Hub</span>
             </h1>
-            <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-delay">
-              <Sparkles className="h-6 w-6 text-blue-500 animate-pulse" />
-              <p className="text-xl md:text-2xl text-gray-700 font-medium">
+            <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in-delay">
+              <Sparkles className="h-8 w-8 text-yellow-500 animate-bounce" />
+              <p className="text-2xl md:text-3xl bg-gradient-to-r from-blue-600 via-purple-500 to-indigo-600 bg-clip-text text-transparent font-bold tracking-wide shadow-lg">
                 Smart Note-Taking Made Simple
               </p>
-              <Sparkles className="h-6 w-6 text-indigo-500 animate-pulse" style={{ animationDelay: '0.5s' }} />
+              <Sparkles className="h-8 w-8 text-orange-500 animate-bounce" style={{ animationDelay: '0.5s' }} />
             </div>
           </div>
           
           <div className="animate-fade-in-delay relative">
             <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-primary/20 blur-xl"></div>
-            <p className="relative text-lg md:text-xl text-gray-600 font-normal mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="relative text-xl md:text-2xl text-gray-700 font-semibold mb-10 max-w-4xl mx-auto leading-relaxed shadow-md bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200">
               Capture ideas quickly, organize notes effortlessly, and find everything instantly. 
               The modern note-taking app that keeps up with your thoughts and helps you stay productive.
             </p>
@@ -93,20 +93,21 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
-                className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-white border-0"
+                className="text-xl px-12 py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-800 shadow-2xl hover:shadow-blue-500/50 transition-all duration-500 font-bold text-white border-0 transform hover:scale-110 animate-pulse ring-4 ring-blue-300/50"
                 onClick={() => window.location.href = '/auth'}
+                type="button"
               >
-                <Brain className="mr-2 h-5 w-5" />
+                <Brain className="mr-3 h-6 w-6 animate-bounce" />
                 Begin Your Journey
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="text-lg px-8 py-6 border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 font-medium transition-all duration-300 cursor-pointer"
+                className="text-xl px-10 py-8 border-2 border-orange-400 text-orange-600 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-700 font-bold transition-all duration-500 cursor-pointer transform hover:scale-105 shadow-lg hover:shadow-orange-300/50 ring-2 ring-orange-200/50"
                 onClick={scrollToFeatures}
                 type="button"
               >
-                <FileText className="mr-2 h-5 w-5" />
+                <FileText className="mr-3 h-6 w-6 animate-pulse" />
                 Explore Features
               </Button>
             </div>
@@ -237,10 +238,11 @@ export default function Index() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="text-lg px-12 py-6 bg-gradient-to-r from-primary to-primary-glow hover:shadow-glow transition-all duration-300 font-medium"
+              className="text-xl px-16 py-10 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-700 hover:from-green-700 hover:via-emerald-700 hover:to-teal-800 shadow-2xl hover:shadow-green-500/50 transition-all duration-500 font-bold text-white border-0 transform hover:scale-110 animate-pulse ring-4 ring-green-300/50"
               onClick={() => window.location.href = '/auth'}
+              type="button"
             >
-              <Sparkles className="mr-2 h-5 w-5" />
+              <Sparkles className="mr-3 h-6 w-6 animate-spin" />
               Start Creating Memories
             </Button>
           </div>
