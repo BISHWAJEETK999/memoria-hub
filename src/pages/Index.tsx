@@ -93,10 +93,10 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-primary-glow hover:shadow-glow transition-all duration-300 font-medium"
+                className="text-xl px-12 py-8 bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-700 hover:via-purple-700 hover:to-indigo-700 shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 font-bold tracking-wide transform hover:scale-105 border-0 text-white"
                 onClick={() => window.location.href = '/auth'}
               >
-                <Brain className="mr-2 h-5 w-5" />
+                <Brain className="mr-3 h-6 w-6" />
                 Begin Your Journey
               </Button>
               <Button 
