@@ -69,23 +69,23 @@ export default function Index() {
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="animate-slide-up">
-            <h1 className="text-6xl md:text-8xl font-playfair font-bold mb-6 bg-gradient-to-r from-emerald-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-2xl animate-glow">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-slate-800 via-blue-600 to-indigo-700 bg-clip-text text-transparent drop-shadow-lg font-sans tracking-tight">
               <span className="inline-block hover:scale-105 transition-transform duration-300">Memoria</span>
               {" "}
-              <span className="inline-block hover:scale-105 transition-transform duration-300 delay-100 bg-gradient-to-r from-purple-500 via-pink-400 to-rose-400 bg-clip-text text-transparent">Hub</span>
+              <span className="inline-block hover:scale-105 transition-transform duration-300 delay-100 bg-gradient-to-r from-purple-600 via-violet-500 to-blue-500 bg-clip-text text-transparent">Hub</span>
             </h1>
             <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-delay">
-              <Sparkles className="h-7 w-7 text-accent animate-pulse" />
-              <p className="text-xl md:text-3xl bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent font-playfair italic font-bold animate-glow">
+              <Sparkles className="h-6 w-6 text-blue-500 animate-pulse" />
+              <p className="text-xl md:text-2xl text-gray-700 font-medium">
                 Smart Note-Taking Made Simple
               </p>
-              <Sparkles className="h-7 w-7 text-primary animate-pulse" style={{ animationDelay: '0.5s' }} />
+              <Sparkles className="h-6 w-6 text-indigo-500 animate-pulse" style={{ animationDelay: '0.5s' }} />
             </div>
           </div>
           
           <div className="animate-fade-in-delay relative">
             <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-primary/20 blur-xl"></div>
-            <p className="relative text-lg md:text-xl bg-gradient-to-r from-foreground via-accent/80 to-foreground bg-clip-text text-transparent font-semibold mb-8 max-w-3xl mx-auto leading-relaxed tracking-wide">
+            <p className="relative text-lg md:text-xl text-gray-600 font-normal mb-8 max-w-3xl mx-auto leading-relaxed">
               Capture ideas quickly, organize notes effortlessly, and find everything instantly. 
               The modern note-taking app that keeps up with your thoughts and helps you stay productive.
             </p>
@@ -93,16 +93,16 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
-                className="text-xl px-12 py-8 bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-700 hover:via-purple-700 hover:to-indigo-700 shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 font-bold tracking-wide transform hover:scale-105 border-0 text-white"
+                className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-white border-0"
                 onClick={() => window.location.href = '/auth'}
               >
-                <Brain className="mr-3 h-6 w-6" />
+                <Brain className="mr-2 h-5 w-5" />
                 Begin Your Journey
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="text-lg px-8 py-6 border-accent/30 text-accent hover:bg-accent/10 hover:border-accent/50 font-medium transition-all duration-300 cursor-pointer"
+                className="text-lg px-8 py-6 border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 font-medium transition-all duration-300 cursor-pointer"
                 onClick={scrollToFeatures}
                 type="button"
               >
@@ -125,10 +125,10 @@ export default function Index() {
       <section id="features-section" className="py-20 px-6 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 bg-gradient-to-r from-foreground via-accent to-primary bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
               Why Choose Memoria Hub?
             </h2>
-            <p className="text-xl text-foreground font-medium max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 font-normal max-w-3xl mx-auto">
               Experience the perfect blend of simplicity and power in your personal knowledge sanctuary
             </p>
           </div>
