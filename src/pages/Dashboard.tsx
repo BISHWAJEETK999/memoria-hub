@@ -34,17 +34,17 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
-  // Redirect if not authenticated
-  if (!authLoading && !user) {
-    return <Navigate to="/auth" replace />;
-  }
-
   useEffect(() => {
     if (user) {
       fetchProfile();
       fetchNotes();
     }
   }, [user]);
+
+  // Redirect if not authenticated
+  if (!authLoading && !user) {
+    return <Navigate to="/auth" replace />;
+  }
 
   const fetchProfile = async () => {
     try {
