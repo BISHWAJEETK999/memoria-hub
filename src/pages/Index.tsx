@@ -15,6 +15,13 @@ export default function Index() {
     return <Navigate to="/dashboard" replace />;
   }
 
+  const scrollToFeatures = () => {
+    const featuresSection = document.getElementById('features-section');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   if (loading) {
     return (
       <WaveBackground>
@@ -51,20 +58,20 @@ export default function Index() {
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="animate-slide-up">
-            <h1 className="text-6xl md:text-8xl font-playfair font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-8xl font-playfair font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary-glow bg-clip-text text-transparent drop-shadow-sm">
               Memoria Hub
             </h1>
             <div className="flex items-center justify-center gap-2 mb-8 animate-fade-in-delay">
-              <Sparkles className="h-6 w-6 text-primary animate-glow" />
-              <p className="text-xl md:text-2xl text-muted-foreground font-playfair italic">
+              <Sparkles className="h-6 w-6 text-accent animate-glow" />
+              <p className="text-xl md:text-2xl text-accent-foreground font-playfair italic font-semibold">
                 Your Digital Memory Palace
               </p>
-              <Sparkles className="h-6 w-6 text-primary animate-glow" />
+              <Sparkles className="h-6 w-6 text-accent animate-glow" />
             </div>
           </div>
           
           <div className="animate-fade-in-delay">
-            <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your thoughts into lasting memories. Create, organize, and cherish your digital notes 
               in a sanctuary designed for your mind's most precious moments.
             </p>
@@ -81,7 +88,8 @@ export default function Index() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="text-lg px-8 py-6 border-primary/20 hover:bg-primary/5 font-medium"
+                className="text-lg px-8 py-6 border-accent/30 text-accent hover:bg-accent/10 hover:border-accent/50 font-medium transition-all duration-300"
+                onClick={scrollToFeatures}
               >
                 <FileText className="mr-2 h-5 w-5" />
                 Explore Features
@@ -99,13 +107,13 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-6 relative">
+      <section id="features-section" className="py-20 px-6 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 bg-gradient-to-r from-foreground via-accent to-primary bg-clip-text text-transparent">
               Why Choose Memoria Hub?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-foreground font-medium max-w-3xl mx-auto">
               Experience the perfect blend of simplicity and power in your personal knowledge sanctuary
             </p>
           </div>
@@ -117,10 +125,10 @@ export default function Index() {
                 <div className="mx-auto mb-4 p-3 bg-gradient-to-br from-primary/10 to-primary-glow/10 rounded-2xl w-fit group-hover:animate-glow">
                   <Brain className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="font-playfair text-xl">Intelligent Organization</CardTitle>
+                <CardTitle className="font-playfair text-xl text-accent font-semibold">Intelligent Organization</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center text-base leading-relaxed">
+                <CardDescription className="text-center text-base leading-relaxed text-foreground/90 font-medium">
                   Your thoughts, beautifully organized. Smart categorization and instant search make finding your memories effortless.
                 </CardDescription>
               </CardContent>
@@ -131,10 +139,10 @@ export default function Index() {
                 <div className="mx-auto mb-4 p-3 bg-gradient-to-br from-primary/10 to-primary-glow/10 rounded-2xl w-fit group-hover:animate-glow">
                   <Shield className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="font-playfair text-xl">Privacy First</CardTitle>
+                <CardTitle className="font-playfair text-xl text-accent font-semibold">Privacy First</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center text-base leading-relaxed">
+                <CardDescription className="text-center text-base leading-relaxed text-foreground/90 font-medium">
                   Your memories are sacred. Advanced encryption and secure authentication keep your thoughts protected and private.
                 </CardDescription>
               </CardContent>
@@ -145,10 +153,10 @@ export default function Index() {
                 <div className="mx-auto mb-4 p-3 bg-gradient-to-br from-primary/10 to-primary-glow/10 rounded-2xl w-fit group-hover:animate-glow">
                   <Cloud className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="font-playfair text-xl">Seamless Sync</CardTitle>
+                <CardTitle className="font-playfair text-xl text-accent font-semibold">Seamless Sync</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center text-base leading-relaxed">
+                <CardDescription className="text-center text-base leading-relaxed text-foreground/90 font-medium">
                   Access your thoughts anywhere, anytime. Real-time synchronization across all your devices keeps you connected.
                 </CardDescription>
               </CardContent>
@@ -159,10 +167,10 @@ export default function Index() {
                 <div className="mx-auto mb-4 p-3 bg-gradient-to-br from-primary/10 to-primary-glow/10 rounded-2xl w-fit group-hover:animate-glow">
                   <Zap className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="font-playfair text-xl">Lightning Fast</CardTitle>
+                <CardTitle className="font-playfair text-xl text-accent font-semibold">Lightning Fast</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center text-base leading-relaxed">
+                <CardDescription className="text-center text-base leading-relaxed text-foreground/90 font-medium">
                   Capture thoughts at the speed of thinking. Instant note creation and blazing-fast performance.
                 </CardDescription>
               </CardContent>
@@ -173,10 +181,10 @@ export default function Index() {
                 <div className="mx-auto mb-4 p-3 bg-gradient-to-br from-primary/10 to-primary-glow/10 rounded-2xl w-fit group-hover:animate-glow">
                   <Star className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="font-playfair text-xl">Beautiful Design</CardTitle>
+                <CardTitle className="font-playfair text-xl text-accent font-semibold">Beautiful Design</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center text-base leading-relaxed">
+                <CardDescription className="text-center text-base leading-relaxed text-foreground/90 font-medium">
                   Elegance meets functionality. A distraction-free interface that inspires creativity and focus.
                 </CardDescription>
               </CardContent>
@@ -187,10 +195,10 @@ export default function Index() {
                 <div className="mx-auto mb-4 p-3 bg-gradient-to-br from-primary/10 to-primary-glow/10 rounded-2xl w-fit group-hover:animate-glow">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="font-playfair text-xl">Personal Sanctuary</CardTitle>
+                <CardTitle className="font-playfair text-xl text-accent font-semibold">Personal Sanctuary</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center text-base leading-relaxed">
+                <CardDescription className="text-center text-base leading-relaxed text-foreground/90 font-medium">
                   Your digital memory palace. A personal space where every thought finds its perfect home.
                 </CardDescription>
               </CardContent>
@@ -203,10 +211,10 @@ export default function Index() {
       <section className="py-20 px-6 bg-gradient-to-r from-primary/5 via-primary-glow/5 to-primary/5">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 bg-gradient-to-r from-accent via-primary to-primary-glow bg-clip-text text-transparent">
               Ready to Build Your Digital Memory Palace?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground font-medium mb-8 max-w-2xl mx-auto">
               Join thousands who have transformed their note-taking experience. Start your journey towards organized thoughts and cherished memories.
             </p>
           </div>
