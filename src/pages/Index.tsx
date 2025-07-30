@@ -36,42 +36,56 @@ export default function Index() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-background font-inter">
+    <div className="min-h-screen bg-gradient-to-br from-background via-accent/10 to-primary/10 font-inter relative overflow-hidden">
+      {/* Animated Background Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/30 to-primary-glow/20 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_var(--primary)_0%,_transparent_50%)] opacity-30"></div>
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,_var(--accent)_0%,_transparent_50%)] opacity-40"></div>
+      </div>
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image with Overlay */}
+        {/* Enhanced Background Image with Multiple Overlays */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 transition-transform duration-[20s] hover:scale-105"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-accent/20 to-primary/30"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-background/40 to-background/80"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(var(--primary)_/_0.1)_50%,transparent_75%)]"></div>
         </div>
         
-        {/* Floating Elements */}
+        {/* Enhanced Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-primary/30 rounded-full animate-float"></div>
-          <div className="absolute top-1/3 right-1/3 w-6 h-6 bg-primary-glow/40 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-primary/20 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
-          <div className="absolute top-1/2 right-1/4 w-5 h-5 bg-primary-glow/30 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/4 left-1/4 w-6 h-6 bg-gradient-to-r from-accent to-primary rounded-full animate-float opacity-60 blur-sm"></div>
+          <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-gradient-to-r from-primary-glow to-accent rounded-full animate-float opacity-70" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-1/3 left-1/3 w-4 h-4 bg-gradient-to-r from-primary to-accent rounded-full animate-float opacity-50 blur-sm" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute top-1/2 right-1/4 w-7 h-7 bg-gradient-to-r from-accent to-primary-glow rounded-full animate-float opacity-60" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-2/3 left-1/5 w-5 h-5 bg-gradient-to-r from-primary-glow to-primary rounded-full animate-float opacity-50" style={{ animationDelay: '3s' }}></div>
+          <div className="absolute top-1/5 right-1/5 w-3 h-3 bg-accent rounded-full animate-float opacity-70 blur-sm" style={{ animationDelay: '5s' }}></div>
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="animate-slide-up">
-            <h1 className="text-6xl md:text-8xl font-playfair font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary-glow bg-clip-text text-transparent drop-shadow-sm">
-              Memoria Hub
+            <h1 className="text-6xl md:text-8xl font-playfair font-bold mb-6 bg-gradient-to-r from-accent via-primary to-primary-glow bg-clip-text text-transparent drop-shadow-2xl animate-glow">
+              <span className="inline-block hover:scale-105 transition-transform duration-300">Memoria</span>
+              {" "}
+              <span className="inline-block hover:scale-105 transition-transform duration-300 delay-100">Hub</span>
             </h1>
-            <div className="flex items-center justify-center gap-2 mb-8 animate-fade-in-delay">
-              <Sparkles className="h-6 w-6 text-accent animate-glow" />
-              <p className="text-xl md:text-2xl text-accent-foreground font-playfair italic font-semibold">
+            <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-delay">
+              <Sparkles className="h-7 w-7 text-accent animate-pulse" />
+              <p className="text-xl md:text-3xl bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent font-playfair italic font-bold animate-glow">
                 Your Digital Memory Palace
               </p>
-              <Sparkles className="h-6 w-6 text-accent animate-glow" />
+              <Sparkles className="h-7 w-7 text-primary animate-pulse" style={{ animationDelay: '0.5s' }} />
             </div>
           </div>
           
-          <div className="animate-fade-in-delay">
-            <p className="text-lg md:text-xl text-foreground font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
+          <div className="animate-fade-in-delay relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-primary/20 blur-xl"></div>
+            <p className="relative text-lg md:text-xl bg-gradient-to-r from-foreground via-accent/80 to-foreground bg-clip-text text-transparent font-semibold mb-8 max-w-3xl mx-auto leading-relaxed tracking-wide">
               Transform your thoughts into lasting memories. Create, organize, and cherish your digital notes 
               in a sanctuary designed for your mind's most precious moments.
             </p>
