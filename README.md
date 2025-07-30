@@ -1,54 +1,51 @@
-# Welcome to your Lovable project
+# Memoria Hub
 
-## Project info
+Smart note-taking made simple. Transform your thoughts into lasting memories with our digital memory palace.
 
-**URL**: https://lovable.dev/projects/394f82d9-d31e-40e9-be55-5f601bbb1ea5
+## Live Demo
 
-## How can I edit this code?
+Visit the live application: [Memoria Hub](https://your-vercel-url.vercel.app)
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- 📝 Smart note creation and organization
+- 🔍 Powerful search functionality
+- 🎨 Beautiful, intuitive interface
+- 📱 Responsive design for all devices
+- 🔐 Secure user authentication
+- ☁️ Cloud synchronization
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/394f82d9-d31e-40e9-be55-5f601bbb1ea5) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18+ and npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd memoria-hub
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Development
 
-**Use GitHub Codespaces**
+To start developing:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Make your changes in the `src/` directory
+2. The development server will automatically reload
+3. Commit and push your changes to deploy via Vercel
 
 ## What technologies are used for this project?
 
@@ -60,14 +57,24 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/394f82d9-d31e-40e9-be55-5f601bbb1ea5) and click on Share -> Publish.
+This project is deployed on Vercel. To deploy your own version:
 
-## Can I connect a custom domain to my Lovable project?
+1. Fork this repository
+2. Connect your GitHub account to [Vercel](https://vercel.com)
+3. Import your forked repository
+4. Configure environment variables if needed
+5. Deploy automatically on every push to main branch
 
-Yes, you can!
+## Contributing
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
